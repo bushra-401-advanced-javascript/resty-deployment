@@ -1,0 +1,41 @@
+{
+  "homepage": "https://bushra-401-advanced-javascript.github.io/resty-deployment/",
+  "name": "class-27",
+  "version": "1.0.0",
+  "description": "Deployment & Testing for a React app",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "node-sass": "^4.14.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-json-view": "^1.19.1",
+    "react-jsonschema-form": "1.8.1",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "3.4.1",
+    "react-test-renderer": "^16.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
