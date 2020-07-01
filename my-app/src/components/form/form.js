@@ -13,7 +13,7 @@ class Form extends React.Component {
     };
   }
 
-  handleSubmit = e => {
+  handleSubmit = async (e) => {
     e.preventDefault();
 
     if ( this.state.url && this.state.method ) {
@@ -29,8 +29,12 @@ class Form extends React.Component {
       let method = '';
 
       this.setState({request, url, method});
-      // e.target.reset();
 
+      const raw = await fetch(request.url);
+      const data = await raw.json();
+      const count = data.count;
+      console.log('data:>>>>\n', data);
+      this.props(count, data);
     }
 
     else {
